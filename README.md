@@ -43,9 +43,4 @@ class App extends Component {
 |framed| Boolean | No |  Adds a frame to the image| false
 
 # Demo
-You want to see some examples? Easy, follow this steps:
-
-* Clone this Repo https://github.com/iamgutz/react-google-qrcode
-* Install dependencies, run `yarn` or `npm install`
-* Run Storybook `yarn storybook` or `npm run storybook`
-* It will open your browser with the storybook examples
+You want to see some examples? Go to [Online Demo](https://iamgutz.github.io/react-google-qrcode/)
