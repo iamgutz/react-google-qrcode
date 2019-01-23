@@ -1,11 +1,6 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { convertSizeToRem, calculateProportion } from './helpers';
 import { BORDER_RADIUS_FACTOR, PADDING_FACTOR } from './constants';
-
-const fadeIn = keyframes`
-  from { opacity 0; }
-  to { opacity 1; }
-`;
 
 export const Image = styled.div`
   background-image: url(${props => props.src});
@@ -14,7 +9,6 @@ export const Image = styled.div`
   height: 100%;
   background-size: cover;
   background-position: center;
-  animation: ${fadeIn} .5s linear;
   font-size: inherit;
 `;
 
@@ -36,5 +30,6 @@ export const QRCodeWrap = styled.div`
     box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1);
     border-radius: ${calculateProportion(size, BORDER_RADIUS_FACTOR)}rem;
     padding: ${calculateProportion(size, PADDING_FACTOR)}rem;
+    background: #fff;
   `}
 `;

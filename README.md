@@ -1,39 +1,33 @@
-# React Image Loader HOC
-[![Version](https://img.shields.io/npm/v/react-image-loader-hoc.svg?style=for-the-badge&logo=appveyor)]()
-[![React](https://img.shields.io/npm/dependency-version/react-image-loader-hoc/react.svg?style=for-the-badge&logo=appveyor)]()
-[![Downloads](https://img.shields.io/npm/dw/react-image-loader-hoc.svg?style=for-the-badge&logo=appveyor)]()
-[![License](https://img.shields.io/github/license/iamgutz/react-image-loader-hoc.svg?style=for-the-badge&logo=appveyor)]()
+# React Google QR Code
+[![Version](https://img.shields.io/npm/v/react-google-qrcode.svg?style=for-the-badge&logo=appveyor)]()
+[![React](https://img.shields.io/npm/dependency-version/react-google-qrcode/react.svg?style=for-the-badge&logo=appveyor)]()
+[![Downloads](https://img.shields.io/npm/dw/react-google-qrcode.svg?style=for-the-badge&logo=appveyor)]()
+[![License](https://img.shields.io/github/license/iamgutz/react-google-qrcode.svg?style=for-the-badge&logo=appveyor)]()
 
-React-Image-Loader-HOC is a High Order Component that allows you to enhance your React Image Component by adding features to handle the loading of the image source in an elegant way.
-
-## Features
-* Super easy to use.
-* Customizable - Provided props to make it custom for your project.
+react-google-qrcode is a React Component to generate a QR code via Google Chart API.
+![screen shot](https://raw.githubusercontent.com/iamgutz/react-google-qrcode/master/screenshots/screenshot.png)
 
 ## Installation
 ```
-$ yarn add react-image-loader-hoc
+$ yarn add react-google-qrcode
 or
-$ npm install --save react-image-loader-hoc
+$ npm install --save react-google-qrcode
 ```
 
 ## Usage
 
 ```
 import React, { Component } from 'react';
-import withImageLoader from 'react-image-loader-hoc';
-
-const Image = props => (<img alt="" {...props} />);
-const ImageWithLoader = withImageLoader(Image);
+import QRCode from 'react-google-qrcode';
 
 class App extends Component {
   render() {
     return (
         <div>
-          <ImageWithLoader
-            src="https://edmullen.net/test/rc.jpg"
-            width="400px"
-            height="200px"
+          <QRCode
+            data="https://www.google.com"
+            size={130}
+            framed
           />
         </div>
     );
@@ -44,17 +38,14 @@ class App extends Component {
 ### Props
 |Prop| Type | Required | Description| Default
 |---	|---	|--- |--- |--- |
-|src| String | Yes | Image url| -
-|onLoad| Function | No | Callback when load is successful| -
-|onError| Function | No |  Callback when load fails| -
-|loaderComp| Component | No | Custom React component to be displayed while loading| -
-|errorComp| Component | No | Custom React component to be displayed on Error| -
-|fadeIn| Boolean | No | Load the image with Fade In effect| True
+|data| String | No | The data to encode| -
+|size| Number | No | Image size in pixels (width x height). Min value: 30, Max value: 547| 130
+|framed| Boolean | No |  Adds a frame to the image| false
 
 # Demo
 You want to see some examples? Easy, follow this steps:
 
-* Clone this Repo https://github.com/iamgutz/react-image-loader-hoc
+* Clone this Repo https://github.com/iamgutz/react-google-qrcode
 * Install dependencies, run `yarn` or `npm install`
 * Run Storybook `yarn storybook` or `npm run storybook`
 * It will open your browser with the storybook examples

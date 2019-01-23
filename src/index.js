@@ -5,25 +5,25 @@ import { Image, QRCodeWrap } from './styles';
 import { getQrImageSrc } from './helpers';
 import { QR_DEFAULT_SIZE } from './constants';
 
-const LoadFigure = withImageLoader(Image);
+const QRImage = withImageLoader(Image);
 
-const QRCode = ({ data, sizePx, ...rest }) => (
-  <QRCodeWrap size={sizePx} {...rest}>
-    <LoadFigure
-      src={getQrImageSrc(data, sizePx)}
-      size={sizePx}
+const QRCode = ({ data, size, ...rest }) => (
+  <QRCodeWrap size={size} {...rest}>
+    <QRImage
+      src={getQrImageSrc(data, size)}
+      size={size}
     />
   </QRCodeWrap>
 );
 
 QRCode.propTypes = {
   data: PropTypes.string,
-  sizePx: PropTypes.number,
+  size: PropTypes.number,
 };
 
 QRCode.defaultProps = {
   data: null,
-  sizePx: QR_DEFAULT_SIZE,
+  size: QR_DEFAULT_SIZE,
 };
 
 export default QRCode;
