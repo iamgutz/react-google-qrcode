@@ -16,8 +16,8 @@ addDecorator(getStories => (
 ));
 addDecorator(
   withOptions({
-    name: 'Writing Stories',
-    url: 'https://storybook.js.org/basics/writing-stories/',
+    name: 'React Google QR Code',
+    url: 'https://www.npmjs.com/package/react-google-qrcode',
     addonPanelInRight: true,
   })
 )

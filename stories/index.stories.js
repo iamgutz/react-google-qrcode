@@ -6,10 +6,10 @@ import QRCode from '../src/index';
 import { QR_DEFAULT_SIZE } from '../src/constants';
 import { Content, Title } from './styles';
 
-const dynamicStories = storiesOf('React Google QR code', module);
+const dynamicStories = storiesOf('DEMO', module);
 dynamicStories.addDecorator(withKnobs);
 
-dynamicStories.add('Example', () => {
+dynamicStories.add('Basic Usage', () => {
   const knobs = {
     data: 'https://www.google.com',
     size: QR_DEFAULT_SIZE,
