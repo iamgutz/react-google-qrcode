@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/github/license/iamgutz/react-google-qrcode.svg?style=for-the-badge&logo=appveyor)]()
 
 react-google-qrcode is a React Component to generate a QR code via Google Chart API.
-![screen shot](https://raw.githubusercontent.com/iamgutz/react-google-qrcode/master/screenshots/screenshot.png)
+![screen shot](https://raw.githubusercontent.com/iamgutz/react-google-qrcode/master/screenshots/demo-image.png)
 
 ## Installation
 ```
