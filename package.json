@@ -1,6 +1,6 @@
 {
   "name": "react-google-qrcode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Component to Generate a Google QR Code",
   "main": "dist/index.js",
   "engines": {
